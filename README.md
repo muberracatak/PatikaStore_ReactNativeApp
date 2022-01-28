@@ -1,0 +1,1 @@
+# PatikaStore_ReactNativeApp
