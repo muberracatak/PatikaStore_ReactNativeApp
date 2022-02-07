@@ -1,7 +1,7 @@
 import React from "react";
 import { View,Image ,Text} from "react-native";
 import styles from "./NewsCard2.style";
-import SearchBar from "./SearchBar";
+import SearchBar from "../SearchBar";
 import Screen from "./Screen";
 
 const NewsCard2 = ({products}) =>
@@ -12,17 +12,14 @@ const NewsCard2 = ({products}) =>
             {uri: products.imgURL
         }}/>
          <Text style={styles.title}>{products.title} </Text>
-        <Text> {products.price}</Text>
-        <Text>{products.inStock}</Text></View>
-        
-       
-       
+         <View style={styles.info_conainer}>
+                <Text>{products.price}</Text>
+                </View>
+                {products.inStock ? (<View style={styles.soldoutContainer}>
+                    <Text style={styles.soldoutTitle}>Stokta yok</Text>
+                </View>): null }
+                </View>
         </View>
-    
-        
-        );
-    
-   
-    
+        );    
 };
 export default NewsCard2;
