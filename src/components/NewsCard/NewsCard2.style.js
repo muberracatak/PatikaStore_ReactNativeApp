@@ -27,6 +27,17 @@ export default StyleSheet.create(
             padding:5,
             backgroundColor:'#eceff1'
 
+        },
+        soldoutContainer:{
+            borderColor:'red',
+            padding:5,
+        },
+        soldoutTitle:
+        {
+            color:'red',
+            fontSize:12,
+            fontWeight:'bold'
+
         }
     }
 )
